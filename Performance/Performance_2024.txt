@@ -1,0 +1,28 @@
+Design / Architecture and documentation -- I have successfully completed CustomerCategory, DistributorService, JourneyPlanService, OutletService, ProductMasterService, SalesmanService developer Specification document. I also provided DTT MS product improvement plan.
+
+Delivery -- I reviewed the source code for VN/TH/PH, ID and PK, always deploy the solution on time. I fixed the technical debt of code in VN/TH/PH market from multiple branches (sit_isr_IC,StagingR1.1-IC, PerformanceR1.1-IC, ProductionR1.1-IC) to develop_IC branch. I have deployed the production releases. I have also provided support to production tickets. 
+
+People & Culture -- I have scaled up team knowledge in troubleshooting the issues, I always resolved their technical queries and issues. I have provided KT to team.
+
+Innovation -- I have provided solutions to fix the performance issues.
+
+Infrastructure -- I worked with Infra team to setup SIT, Performance and PROD environment and support team on infrastructure issues.
+
+Support -- I have provided support to infra team and testing team.
+
+###################################################################################################################################
+
+I have worked on complex user stories and delivered within timeframe, such as End Visit use case(system endvisit), EndVisit new use case(night use case), MDC context Logging for traceability of microservices, Single code base configuration, disable swagger in prod env. and so on.
+I have worked on multiple PROD issues such as messages are stuck in Queues, SalesmanJourneyPlan issues, duplicate outlets are displaying in todays beat page, all outletcount & mtd outlets count mismatch, Cabinet scan is not working and so on. I have also provided support to production tickets.
+I have helped team in analysis & development.
+I have helped team in Design / Architecture, given suggestion in Single Codebase, database node write/read node in cloud, co-rrelationId for microservice tracing, Java & Spring Boot version upgrade so that could have better exception handling, coding standard etc.
+Worked on Solace & HA-Proxy poc.
+I have scaled up team knowledge in troubleshooting the issues, I always resolved their technical queries and issues.
+I have provided KT & support to new team members so that they could be speedup with their work such as PJP redesigning analysis & implementation.
+I have completed all the project & Accenture specific mandatory training on time.
+
+
+Could you please provide your feedback.
+
+muthukumar.arumugam@accenture.com     
+	

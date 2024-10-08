@@ -1,0 +1,107 @@
+Master branch
+git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/m2m-api   
+
+From branch
+git clone -b <branch> <remote_repo>
+git clone -b Stage https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/m2m-api
+git clone -b develop ssh://git@tools.adidas-group.com:7999/comnext/basket-api.git  : checkout from develop branch
+git clone -b feature/4196-integration-of-postgres ssh://git@tools.adidas-group.com:7999/comnext/shipping-service.git
+git clone -b feature/COMN-4200-collection-mongodb-for-fulfilment ssh://git@tools.adidas-group.com:7999/comnext/shipping-service.git
+git clone -b feature/COMN-4687-Shipping-pricing-structure-creation-db ssh://git@tools.adidas-group.com:7999/comnext/shipping-service.git
+git clone -b feature/COMN-5176-shipment-options ssh://git@tools.adidas-group.com:7999/comnext/shipping-service.git
+git clone -b feature/COMN-4345-pricing-details ssh://git@tools.adidas-group.com:7999/comnext/shipping-service.git 
+git clone -b feature/COMN-4210-Delivery-Promise ssh://git@tools.adidas-group.com:7999/comnext/shipping-service.git
+
+Merge commands
+https://stackoverflow.com/questions/40975751/copy-changes-from-one-branch-to-another
+git checkout BranchB
+git merge BranchA
+
+naming convention: 
+			feature/ : new story
+			bug/	 : for bug
+			hotfix/	 :
+
+git branch -m master main - rename master branch to main
+
+Git pull origin master
+git checkout –b <Branch Name> : git checkout -b feature/COMN-915-US-default-tax-rate-calculation
+								git checkout -b feature/COMN-2848-Taxation-modification-view-taxdata-function-admin-console
+								(feature/COMN-2848-Taxation-modification-view-taxdata-function-admin-console)
+								feature/COMN-4581-Flyway-versioning-postgres
+								feature/COMN-4687-Shipping-pricing-structure-creation-db
+								git checkout -b feature/COMN-4155-dpe-integration-clickandcollect 
+								git checkout -b feature/COMN-4155-cnc-dpe-integration / feature/COMN-4155-cnc-dpe-integration
+								git checkout -b feature/COMN-6137-addition-of-tax-class-post-shipment-options
+Git status
+Git add .
+Git commit -m “message”
+Git push origin <branch name>
+git checkout master/branch_name
+git restore local.env : discard local changes
+git reset --hard
+git reset HEAD~1    : It reset local commit
+get fetch --all     : It fetch all the branch after run below command
+git branch
+
+git reset commit wise 
+1) git log then will be getting below log, choose commit code which you want to reset
+2) git reset --hard 338165b29e0b171e4bb0d1a265a27a092268b3e7
+3) After point 2 code will be desired state
+
+
+############### part B deploy command #################
+sam package --template samtemplate-lambdatest.yaml --s3-bucket hcl-lambda-test --output-template-file packaged-lambdatest.yaml 
+aws cloudformation package --template samtemplate-lambdatest.yaml --s3-bucket hcl-lambda-test --output-template-file packaged-lambdatest.yaml
+
+sam package --template samIOTtemplate.yaml --s3-bucket aws-sam-local-dev-india --output-template-file packaged.yaml
+sam deploy --template packaged.yaml --stack-name m2m-iot --capabilities CAPABILITY_IAM
+
+
+##### Exact command #####
+aws cloudformation package --template samIOTtemplate.yaml --s3-bucket aws-sam-local-dev-india --output-template-file packaged.yaml
+aws cloudformation deploy --template packaged.yaml --stack-name m2m-iot --capabilities CAPABILITY_IAM 
+
+
+commit b79d410168bb2e4db614a0d2c54c6fd02754ff6c
+Author: Ram <ram.sin@hcl.com>
+Date:   Fri Feb 15 15:59:44 2019 +0530
+
+    sorting added for user specific equipment and associaed PC companies
+	
+	
+commit 338165b29e0b171e4bb0d1a265a27a092268b3e7
+Author: Ram <ram.sin@hcl.com>
+Date:   Mon Feb 18 19:58:20 2019 +0530
+
+    code clean for module function of admin
+
+
+
+####### Maven test case skip command #####
+mvn clean install -Dmaven.test.skip=true
+
+https://www.atlassian.com/git/tutorials/syncing/git-fetch      : git commands 
+
+######
+udpate user password
+update in_users set password='49e3e9b108c246dfb5e4876a370066d1e699489418bc3e40cd72ebe51b315721be3cdc4bb4b9c30f0e1a586d1450e84a99fcdff251a226c88f2694126defe720' where id=1001								
+
+###################
+
+UUID format: https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid
+
+UUID v1 :
+/^[0-9A-F]{8}-[0-9A-F]{4}-[1][0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+UUID v2 :
+
+/^[0-9A-F]{8}-[0-9A-F]{4}-[2][0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+UUID v3 :
+
+/^[0-9A-F]{8}-[0-9A-F]{4}-[3][0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+UUID v4 :
+
+/^[0-9A-F]{8}-[0-9A-F]{4}-[4][0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+UUID v5 :
+
+/^[0-9A-F]{8}-[0-9A-F]{4}-[5][0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
